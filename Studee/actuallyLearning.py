@@ -8,6 +8,8 @@
 import math
 import time
 import random
+import os
+import shutil
 
 # --- VARIABLES --- #
 # Used to store data like in C
@@ -328,4 +330,99 @@ numba2 = 1000000000
 # print("The number in Scientific Notation is {:e}".format(numba2)) # Display number as scientific notation
 
 # --- PSEUDO RANDOM NUMBER --- #
-x = random
+x = random.randint(1,6) # random number from 1 to 6
+y = random.random() # random number from 0 to 1
+myList = ['rock', 'paper', 'scissors']
+z = random.choice(myList)
+cards = [1, 2, 3, 4, 5, 6, 7, 8, 9, "J", "Q", "K", "A"]
+random.shuffle(cards) # shuffle cards
+
+# --- EXCEPTION HANDLING --- #
+# Exception = Eveent detected during execution that interrupt the normal flow of the program
+# try will be used to wrap a 'dangerous' code
+# try:
+#     numerator = int(input("Enter a numerator: "))
+#     denominator = int(input("Enter a denumerator: "))
+#     result = numerator / denominator
+# except ZeroDivisionError as e:
+#     print(e)
+#     print("You can't divide by zero!")
+# except ValueError as e:
+#     print(e)
+#     print("Numbers only please!")
+# except Exception as e:
+#     print(e)
+#     print("Something went wrong! :(")
+# else:
+#     print(result)
+
+# --- PLAYING WITH FILES --- #
+# Make sure to import os and shutil first
+
+# FILE DETECTION
+path = "C:\\Users\\Asus VivobookPro\\Documents\\CODING STUFF\\PYTHON STUFF\\IMAGES\\PolynomialRegression.png"
+# if os.path.exists(path):
+#     print("That file exists!")
+#     if os.path.isfile(path):
+#         print("It is a file!")
+#     elif os.path.isdir(path):
+#         print("It is a folder!")
+# else:
+#     print("Doesn't exist T-T")
+
+# FILE READING
+# try:
+#     with open('C:\\Users\\Asus VivobookPro\\Documents\\CODING STUFF\\PYTHON STUFF\\PY\\Studee\\triplesot24.txt') as file:
+#         print(file.read()) # Closed Automatically after Opened
+# except FileNotFoundError:
+#     print("That file was not found")
+
+# FILE WRITING
+ot10 = "S1 = SeoYeon\nS2 = Hyerin\nS3 = Jiwoo\nS4 = ChaeYeon\nS5 = YooYeon\nS6 = SooMin\nS7 = NaKyoung\nS8 = YuBin\nS9 = Kaede\nS10 = DaHyun"
+with open('C:\\Users\\Asus VivobookPro\\Documents\\CODING STUFF\\PYTHON STUFF\\PY\\Studee\\triplesot10.txt', 'w') as file:
+    file.write(ot10)
+
+# FILE COPYING
+# copyfile() = copies content of a file
+# copy() = copyfile() + permission mode + destination can be a directory
+# copy2() = copy() + copies metadata (file's creation and modification times)
+
+# source, destination
+shutil.copyfile('C:\\Users\\Asus VivobookPro\\Documents\\CODING STUFF\\PYTHON STUFF\\PY\\Studee\\triplesot10.txt', 'C:\\Users\\Asus VivobookPro\\Documents\\CODING STUFF\\PYTHON STUFF\\PY\\Studee\\triplesot10Copy.txt')
+
+# FILE MOVING
+SourceFile = "C:\\Users\\Asus VivobookPro\\Documents\\CODING STUFF\\PYTHON STUFF\\PY\\Studee\\SeoYeonVictory.png"
+destinationFile = "C:\\Users\\Asus VivobookPro\\Pictures\\Screenshots\\Screenshot (1196).png"
+# try:
+#     if os.path.exists(destinationFile):
+#         print("There is already a file with the same name")
+#     else:
+#         os.replace(SourceFile, destinationFile)
+#         print(SourceFile + " has been successfully moved!")
+# except FileNotFoundError:
+#     print(SourceFile + " Not found!")
+
+# FILE DELETION
+
+toBeDel = "C:\\Users\\Asus VivobookPro\\Pictures\\Screenshots\\Screenshot (967).png"
+# try:
+#     os.remove(toBeDel) # remove a file
+#     os.rmdir(toBeDel) # remove an empty directory / folder
+#     shutil.rmtree(toBeDel) # Considered Dangerous, remove the entire directory containing the file
+# except FileNotFoundError:
+#     print("That file was not found")
+# except PermissionError:
+#     print("You do not have permission!")
+# except OSError:
+#     print("You cannot that file using that function")
+# else:
+#     print("File successfully deleted!")
+
+# --- MODULE PROGRAMMING --- #
+# importing a module means using functions from other python files
+# import moduleTest as mt
+# from moduleTest import * # IMPORT EVERYTHING
+# from moduleTest import Hi # IMPORT THE HI FUNCTION
+# mt.Hi()
+
+# --- OOP WITH PYTHON --- #

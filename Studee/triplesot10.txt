@@ -1,0 +1,10 @@
+S1 = SeoYeon
+S2 = Hyerin
+S3 = Jiwoo
+S4 = ChaeYeon
+S5 = YooYeon
+S6 = SooMin
+S7 = NaKyoung
+S8 = YuBin
+S9 = Kaede
+S10 = DaHyun
