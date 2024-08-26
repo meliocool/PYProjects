@@ -426,3 +426,172 @@ toBeDel = "C:\\Users\\Asus VivobookPro\\Pictures\\Screenshots\\Screenshot (967).
 # mt.Hi()
 
 # --- OOP WITH PYTHON --- #
+# Python Object Oriented Programming (POOP) is a way to program a real world object with it's ATTRIBUTES
+# and ACTIONS
+# Best practice to use different modules for different classes
+# import the module
+from triples import Member
+from humans import Human, NPC, idol, tripleS, hyuna
+S1 = Member("Yoon SeoYeon", "S1", "21", "August 6 2003", "Dodger Blue")
+# S1.gnd_Part("dashi haeboja")
+
+# INHERITANCE
+# INHERIT ATTRIBUTES FROM PARENT CLASS
+# soosein = NPC()
+# seoyeon = idol()
+# soosein.yap()
+# seoyeon.sing()
+
+# MULTILEVEL INHERITANCE
+# naky = tripleS()
+# naky.objekt()
+
+# MULTIPLE INHERITANCE
+# A child can inherit more than 1 parent attributes
+# hyuna = hyuna()
+# hyuna.loser()
+
+# METHOD CHAINING
+# chaining more than 1 method
+# MUST return self at the end of every method functions
+# naky.objekt().blabla()
+
+# SUPER FUNCTIONS
+# Function used to give access to the methods of parent class.
+# Returns a temporary object of a parent class when used
+class Rectangle:
+    def __init__(self, length, width):
+        self.length = length
+        self.width = width
+class Square(Rectangle):
+    def __init__(self, length, width):
+        super().__init__(length, width)
+    def area(self):
+        return self.length * self.width
+class Cube(Rectangle):
+    def __init__(self, length, width, height):
+        super().__init__(length, width)
+        self.height = height
+    def volume(self):
+        return self.length*self.width*self.height
+
+sqr = Square(5, 5)
+cube = Cube(5, 5, 5)
+# print(sqr.area())
+# print(cube.volume())
+
+# ABSTRACT CLASSES
+# prevents a user from creating an object of that class
+# compels user to override abstract methods in a child class
+from abc import ABC, abstractmethod
+class Vehicle(ABC):
+    @abstractmethod # CHILDREN OF THIS CLASS MUST OVERWRITE THIS ABSTRACT METHOD
+    def go(self):
+        pass
+class Car(Vehicle):
+    def go(self):
+        print("You are driving the car")
+class Motorcycle(Vehicle):
+    def go(self):
+        print("You are riding the motorcycle")
+car = Car()
+motorcycle = Motorcycle()
+# car.go()
+# motorcycle.go()
+
+# DUCK TYPING
+# Concept where the class of an object is less important than the methods/attributes
+# Class type is not checked if minimum methods/attributes are present
+# " IF IT WALKS LIKE A DUCK, AND QUACKS LIKE A DUCK, THEN IT MUST BE A DUCK! "
+# " IF IT SINGS LIKE A S, AND DANCES LIKE A S, THEN IT MUST BE A S!"
+class NaKyoung:
+    def line(self):
+        print("kkume nanido jom deo nan nopilge")
+    def dancePart(self):
+        print("NaKyoung's stretch")
+class YooYeon:
+    def line(self):
+        print("dashi haebolkka")
+    def dancePart(self):
+        print("YooYoen's bow and arrow")
+class girlsNeverDie:
+    def part(self, nakyoung):
+        nakyoung.line()
+        nakyoung.dancePart()
+        print("You are a tripleS member!")
+# nakyoung = NaKyoung()
+# yooyeon = YooYeon()
+# girlsneverdie = girlsNeverDie()
+# girlsneverdie.part(yooyeon)
+
+# --- WALRUS OPERATOR --- #
+# assigns values to a variable as part of a larger expression
+SNames = list()
+# while SName := input("Add your favorite S's: ") != 'quit':
+#     SNames.append(SName)
+# generally shortens the entire program
+
+# --- HIGHER ORDER FUNCTION --- #
+# A function that is either returning a function, OR accept a function as an argument
+def cap(text):
+    return text.upper()
+def low(text):
+    return text.lower()
+def hello(func):
+    text = func("hello")
+    print(text)
+
+# hello(cap)
+
+# --- LAMBDA FUNCTION --- #
+# function written in 1 line using lambda keyword accepts any number of arguments but only has one 
+# expression (shortcut)
+# Syntax -> lambda parameters:expression
+triple = lambda x:x * 3
+age_check = lambda age: True if age >= 18 else False
+# print(triple(5))
+# print(age_check(18))
+
+# --- SORTING --- #
+# sort() method = used with lists
+# sort() function = used with iterables such as tuple
+uriMemberList = ["SeoYeon", "Hyerin", "Jiwoo", "Chaeyeon", "YooYeon"]
+uriMemberTuple = ("SeoYeon", "Hyerin", "Jiwoo", "Chaeyeon", "YooYeon")
+uriMemberList.sort()
+uriMemberTuple = sorted(uriMemberTuple)
+# for i in uriMemberList:
+#     print(i)
+# for i in uriMemberTuple:
+#     print(i)
+
+# NEXT LEVEl
+uriMember = [("SeoYeon", "S1", 21), 
+             ("YeonJi", "S12", 16), 
+             ("NaKyoung", "S7", 21),
+             ("YooYeon", "S5", 23),
+             ("HaYeon", "S19", 17)]
+SNum = lambda num:int(num[1][1:])
+uriMember.sort(key=SNum)
+# for i in uriMember:
+#     print(i)
+
+# --- MAP --- #
+# map() = applies a  function to each item in an iterable (list, tuple, etc)
+# map(function, iterable)
+
+store = [("The Story Begins", 60.00),
+         ("Assemble24", 25.00),
+         ("How Sweet", 30.00)]
+to_rupiah = lambda data: (data[0], data[1]*15435.60)
+idr_price = list(map(to_rupiah, store))
+for i in idr_price:
+    print(i)
+
+# --- FILTER --- #
+# filter() = creates a collection of elements from an iterable for which a function returns
+# filter(function, iterable)
+
+drinking_age = lambda data: data[2] >= 19
+drinking_member = list(filter(drinking_age, uriMember))
+for i in drinking_member:
+    print(i)
