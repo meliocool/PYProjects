@@ -21,6 +21,8 @@ attractive = False # Boolean
 
 # print("Hi my name is", name, "I am " + str(age) + " years old", "and i am " + str(height) + " cm tall") # Print statement ex
 
+#--------------------------------------------------------------------------#
+
 # --- STRING MANIPULATION --- #
 # String are texts noted by "" or ''
 
@@ -44,12 +46,16 @@ text = "Go Youn-Jung"
 # # Multiply string by a certain number to print it a number of times
 # print(text*3)
 
+#--------------------------------------------------------------------------#
+
 # --- USER INPUTS --- #
 # Receive an input from the user like scanf() in C
 
 # level = int(input("What is your current level in Elden Ring? "))
 # build = input("What is your current Elden Ring Build? ")
 # print("Currently you are level " + str(level) + " with a " + build + " build")
+
+#--------------------------------------------------------------------------#
 
 # --- MATH FUNCTIONS --- #
 number = 3.14
@@ -73,6 +79,8 @@ num3 = 690
 # # Find the smallest of some values
 # print(min(num1, num2, num3))
 
+#--------------------------------------------------------------------------#
+
 # --- STRING SLICING --- #
 # Indexing[] or slice()
 # [start:stop:step]
@@ -90,6 +98,8 @@ webName = slice(12,-4)
 # print(reverse_char)
 # print(website[webName])
 
+#--------------------------------------------------------------------------#
+
 # --- IF STATEMENTS --- #
 # if elif else
 
@@ -100,6 +110,8 @@ webName = slice(12,-4)
 #     print("You just like me fr")
 # else:
 #     print("Nice! :D")
+
+#--------------------------------------------------------------------------#
 
 # --- LOOPING --- #
 # WHILE LOOP
@@ -153,6 +165,8 @@ idolName = "An Yujin"
 #     else:
 #         print(i)
 
+#--------------------------------------------------------------------------#
+
 # --- LIST --- #
 # SAME AS ARRAY, STORE MULTIPLE ITEMS IN A VARIABLE
 
@@ -166,6 +180,8 @@ anime = ["Bleach", "Kimi ni Todoke", "Kami no Tou", "Mob Psycho 100"]
 # for i in anime:
 #     print(i, end=" ")
 
+#--------------------------------------------------------------------------#
+
 # 2D LISTS
 ThirdGen = ["TWICE", "Red Velvet", "Blackpink"]
 FourthGen = ["NewJeans", "NMIXX", "STAYC"]
@@ -173,12 +189,16 @@ GirlGroups = [ThirdGen, FourthGen]
 # print(GirlGroups)
 # print(GirlGroups[0][0]) # KINDA LIKE AN 2D MATRIX IN C
 
+#--------------------------------------------------------------------------#
+
 # --- TUPLE --- #
 # Collection which is ordered and unchangeable used to group related data
 
 homie = ("Nico",  19, "Male")
 # if "Nico" in homie:
 #     print("Fat ass mf is my homie")
+
+#--------------------------------------------------------------------------#
 
 # --- SET --- #
 # Unordered collection, unindexed, and no duplicate values
@@ -194,6 +214,8 @@ jyp_Group = twice_member.union(nmixx_member)
 # print(twice_member.intersection(nmixx_member)) # What they both have in common
 # for i in jyp_Group:
 #     print(i) # Will print in random order
+
+#--------------------------------------------------------------------------#
 
 # --- DICTIONARY --- #
 # A changeable and fast unordered collection of unique key:value because they use hashing
@@ -215,6 +237,8 @@ aceGroups.pop('HYBE')
 # for key,value in aceGroups.items():
 #     print(key,value)
 
+#--------------------------------------------------------------------------#
+
 # --- INDEX OPERATOR ---- #
 # Access to each element inside a string, list, or tuples
 
@@ -232,6 +256,8 @@ last_char = aespa_mem[-1] # Negative indexing for the last character
 # print(last_three)
 # print(last_char)
 
+#--------------------------------------------------------------------------#
+
 # --- FUNCTION --- #
 # a block of code that only executed when called
 
@@ -239,6 +265,8 @@ def susein(x, y, z, n):
     return (x * y + z) / n
 
 # print(int(susein(8, 4, 4, 6)))
+
+#--------------------------------------------------------------------------#
 
 # --- NESTED FUNCTION CALLS --- #
 # returned value from another function can be used as an argument in the parameter of other functions
@@ -248,6 +276,8 @@ def susein(x, y, z, n):
 
 # The code above would first get an input stored in what and then print the inputted number but before that
 # it turns it into a float, then find the absolute form, and then round it to the nearest whole number
+
+#--------------------------------------------------------------------------#
 
 # --- VARIABLE SCOPE --- #
 # A variable is only recognized inside a region it was declared
@@ -261,6 +291,8 @@ def display_Idol():
 
 # display_Idol()
 # print(aidoru)
+
+#--------------------------------------------------------------------------#
 
 # --- *ARGS --- #
 # *args is a parameter that will pack all given arguments into a tuple
@@ -284,6 +316,8 @@ def addition2(*args):
     return sum
 # print(addition2(1,2,3,4,5)) # So 1 becomes 0 in this case 
 
+#--------------------------------------------------------------------------#
+
 # --- **KWARGS --- #
 # **kwargs is a parameter that will pack all arguments into a dictionary
 # useful because a function can now accept varying amounts of KEYWORD as arguments
@@ -304,6 +338,8 @@ def homieName(**homie):
 # lastName = input("What is their last name? ")
 # nameSections["Last"] = lastName
 # homieName(**nameSections)
+
+#--------------------------------------------------------------------------#
 
 # --- STRING FORMATTING --- #
 # {} format fields in a string
@@ -329,6 +365,8 @@ numba2 = 1000000000
 # print("The number in Hexadecimal is {:X}".format(numba2)) # Display number as Hexadecimal
 # print("The number in Scientific Notation is {:e}".format(numba2)) # Display number as scientific notation
 
+#--------------------------------------------------------------------------#
+
 # --- PSEUDO RANDOM NUMBER --- #
 x = random.randint(1,6) # random number from 1 to 6
 y = random.random() # random number from 0 to 1
@@ -336,6 +374,8 @@ myList = ['rock', 'paper', 'scissors']
 z = random.choice(myList)
 cards = [1, 2, 3, 4, 5, 6, 7, 8, 9, "J", "Q", "K", "A"]
 random.shuffle(cards) # shuffle cards
+
+#--------------------------------------------------------------------------#
 
 # --- EXCEPTION HANDLING --- #
 # Exception = Eveent detected during execution that interrupt the normal flow of the program
@@ -355,6 +395,8 @@ random.shuffle(cards) # shuffle cards
 #     print("Something went wrong! :(")
 # else:
 #     print(result)
+
+#--------------------------------------------------------------------------#
 
 # --- PLAYING WITH FILES --- #
 # Make sure to import os and shutil first
@@ -418,12 +460,16 @@ toBeDel = "C:\\Users\\Asus VivobookPro\\Pictures\\Screenshots\\Screenshot (967).
 # else:
 #     print("File successfully deleted!")
 
+#--------------------------------------------------------------------------#
+
 # --- MODULE PROGRAMMING --- #
 # importing a module means using functions from other python files
 # import moduleTest as mt
 # from moduleTest import * # IMPORT EVERYTHING
 # from moduleTest import Hi # IMPORT THE HI FUNCTION
 # mt.Hi()
+
+#--------------------------------------------------------------------------#
 
 # --- OOP WITH PYTHON --- #
 # Python Object Oriented Programming (POOP) is a way to program a real world object with it's ATTRIBUTES
@@ -435,7 +481,9 @@ from humans import Human, NPC, idol, tripleS, hyuna
 S1 = Member("Yoon SeoYeon", "S1", "21", "August 6 2003", "Dodger Blue")
 # S1.gnd_Part("dashi haeboja")
 
-# INHERITANCE
+#--------------------------------------------------------------------------#
+
+# --- INHERITANCE --- #
 # INHERIT ATTRIBUTES FROM PARENT CLASS
 # soosein = NPC()
 # seoyeon = idol()
@@ -456,7 +504,9 @@ S1 = Member("Yoon SeoYeon", "S1", "21", "August 6 2003", "Dodger Blue")
 # MUST return self at the end of every method functions
 # naky.objekt().blabla()
 
-# SUPER FUNCTIONS
+#--------------------------------------------------------------------------#
+
+# --- SUPER FUNCTIONS --- #
 # Function used to give access to the methods of parent class.
 # Returns a temporary object of a parent class when used
 class Rectangle:
@@ -480,7 +530,9 @@ cube = Cube(5, 5, 5)
 # print(sqr.area())
 # print(cube.volume())
 
-# ABSTRACT CLASSES
+#--------------------------------------------------------------------------#
+
+# --- ABSTRACT CLASSES --- #
 # prevents a user from creating an object of that class
 # compels user to override abstract methods in a child class
 from abc import ABC, abstractmethod
@@ -499,7 +551,9 @@ motorcycle = Motorcycle()
 # car.go()
 # motorcycle.go()
 
-# DUCK TYPING
+#--------------------------------------------------------------------------#
+
+# --= DUCK TYPING --- #
 # Concept where the class of an object is less important than the methods/attributes
 # Class type is not checked if minimum methods/attributes are present
 # " IF IT WALKS LIKE A DUCK, AND QUACKS LIKE A DUCK, THEN IT MUST BE A DUCK! "
@@ -524,12 +578,16 @@ class girlsNeverDie:
 # girlsneverdie = girlsNeverDie()
 # girlsneverdie.part(yooyeon)
 
+#--------------------------------------------------------------------------#
+
 # --- WALRUS OPERATOR --- #
 # assigns values to a variable as part of a larger expression
 SNames = list()
 # while SName := input("Add your favorite S's: ") != 'quit':
 #     SNames.append(SName)
 # generally shortens the entire program
+
+#--------------------------------------------------------------------------#
 
 # --- HIGHER ORDER FUNCTION --- #
 # A function that is either returning a function, OR accept a function as an argument
@@ -543,6 +601,8 @@ def hello(func):
 
 # hello(cap)
 
+#--------------------------------------------------------------------------#
+
 # --- LAMBDA FUNCTION --- #
 # function written in 1 line using lambda keyword accepts any number of arguments but only has one 
 # expression (shortcut)
@@ -551,6 +611,8 @@ triple = lambda x:x * 3
 age_check = lambda age: True if age >= 18 else False
 # print(triple(5))
 # print(age_check(18))
+
+#--------------------------------------------------------------------------#
 
 # --- SORTING --- #
 # sort() method = used with lists
@@ -575,6 +637,8 @@ uriMember.sort(key=SNum)
 # for i in uriMember:
 #     print(i)
 
+#--------------------------------------------------------------------------#
+
 # --- MAP --- #
 # map() = applies a  function to each item in an iterable (list, tuple, etc)
 # map(function, iterable)
@@ -584,8 +648,10 @@ store = [("The Story Begins", 60.00),
          ("How Sweet", 30.00)]
 to_rupiah = lambda data: (data[0], data[1]*15435.60)
 idr_price = list(map(to_rupiah, store))
-for i in idr_price:
-    print(i)
+# for i in idr_price:
+#     print(i)
+
+#--------------------------------------------------------------------------#
 
 # --- FILTER --- #
 # filter() = creates a collection of elements from an iterable for which a function returns
@@ -593,5 +659,181 @@ for i in idr_price:
 
 drinking_age = lambda data: data[2] >= 19
 drinking_member = list(filter(drinking_age, uriMember))
-for i in drinking_member:
-    print(i)
+# for i in drinking_member:
+#     print(i)
+
+# --- REDUCE --- #
+# reduce() applies a function to the first two elements and repeat until 1 value remain
+# DONT FORGET TO import functools!!!
+import functools
+factorial = [6,5,4,3,2,1]
+res = functools.reduce(lambda x,y:x*y, factorial)
+# print(res)
+
+#--------------------------------------------------------------------------#
+
+# --- LIST COMPREHENSION --- #
+# A way to create a new list with less lines of codes and easier to read than lambda
+# list = [expression for i in iterable if conditional (optional)]
+# list = [expression if/else for i in iterable]
+squares = []
+for i in range(1,11):
+    squares.append(i * i)
+# print(squares)
+# with List Comp:
+squares = [i * i for i in range(1,11)]
+# print(squares)
+# Mimic a lambda function
+grades = [100, 90, 81, 73, 40, 52, 60, 62, 31, 0]
+# passed_stud = list(filter(lambda x: x >= 60, grades))
+# print(passed_stud)
+# with List Comp
+passed_stud = [i for i in grades if i >= 60]
+# with else
+passed_stud = [i if i >= 60 else "FAILED" for i in grades]
+# print(passed_stud)
+
+#--------------------------------------------------------------------------#
+
+# --- DICTIONARY COMPREHENSION --- #
+# Same as list comp
+
+# dictionary = {key: expression for (key,value) in iterable}
+cities_in_F = {'NY': 32, 'Boston': 75, 'LA': 100, 'Chicago': 50}
+cities_in_C = {key: round((value - 32) * (5/9)) for (key,value) in cities_in_F.items()}
+# print(cities_in_C)
+
+# dictionary = {key: expression for (key,value) in iterable if conditional}
+member_month = {'NaKyoung': "October", 'SeoYeon':"August", 'SoHyun': "October", 'HaYeon':"August"}
+oct_mem = {key: value for (key,value) in member_month.items() if value == "October"}
+# print(oct_mem)
+aug_mem = {key: value for (key,value) in member_month.items() if value == "August"}
+# print(aug_mem)
+
+# dictionary = {key: (if/else) for (key,value) in iterable}
+mem_zodiac = {key: ("LIBRA" if value == "October" else "LEO") for (key,value) in member_month.items()}
+# print(mem_zodiac)
+
+# dictionary = {key: function(value) for (key,value) in iterable}
+def zodiac_Check(value):
+    if(value == "October"):
+        return "LIBRA"
+    else:
+        return "LEO"
+mem_zodiac2 = {key: zodiac_Check(value) for (key,value) in member_month.items()}
+# print(mem_zodiac2)
+
+#--------------------------------------------------------------------------#
+
+# --- ZIP FUNCTION --- #
+# zip(*iterables) aggregate atau menyatukan two or more iterables (list, tuples, sets, etc)
+# Creates a zip object with paired elements
+toripuruesu = ["SeoYeon", "Hyerin", "Jiwoo"]
+esunamba = ["S1", "S2", "S3"]
+tripleesu = zip(toripuruesu, esunamba)
+# for i in tripleesu:
+#     print(i) 
+# Zips can also be cast into a dictionary or other form of iterables
+tripleesu = dict(zip(toripuruesu, esunamba))
+# for key,value in tripleesu.items():
+#     print(key + " : " + value)
+
+#--------------------------------------------------------------------------#
+
+# --- TIME (THE WORLD) --- #
+# don't forget to import time
+
+# print(time.ctime(0)) # ctime converts a time expressed in seconds since epoch to a readable string
+                       # EPOCH is when my computer thinks time began (ref point)
+
+# print(time.time()) # return current seconds since epoch
+
+# print(time.ctime(time.time())) # return current seconds since epoch in a readable string of date and time
+# time.strftime(format, time_object) = formats a time_object to a string
+# time_object = time.localtime() # local time
+# time_object = time.gmtime()  # UTC time
+# local_time = time.strftime("%B %d %Y %H:%M:%S", time_object)
+# print(local_time)
+
+# time.strptime(time_string, format) = parses a string representing time/date and returns a struct_time object
+# time_string = "20 April, 2020"
+# time_object = time.strptime(time_string,"%d %B, %Y")
+# print(time_object)
+
+# time.asctime(time_tuple) = accepts a time_object or a tuple up to 9 elements and returns a string
+# (year, month, day, hours, minutes, secs, day of the week, day of the year, dst)
+# time_tuple = (2020, 4, 20, 4, 20, 0, 0, 0, 0)
+# time_string = time.asctime(time_tuple)
+# print(time_string)
+
+# time.asctime(time_tuple) = accepts a time_object or a tuple up to 9 elements and return seconds since epoch
+# (year, month, day, hours, minutes, secs, day of the week, day of the year, dst)
+# time_tuple = (2020, 4, 20, 4, 20, 0, 0, 0, 0)
+# time_string = time.mktime(time_tuple)
+# print(time_string)
+
+#--------------------------------------------------------------------------#
+
+# --- MULTITHREADING --- #
+# thread =  a flow of execution. Like a separate order of instructions.
+#                  However each thread takes a turn running to achieve concurrency
+#                  GIL = (global interpreter lock),
+#                  allows only one thread to hold the control of the Python interpreter at any one time
+
+# cpu bound = program/task spends most of it's time waiting for internal events (CPU intensive)
+#             use multiprocessing
+
+# io bound = program/task spends most of it's time waiting for external events (user input, web scraping)
+#            use multithreading
+# Dont forget to import time and threading
+import threading
+def eat_breakfast():
+    time.sleep(3)
+    print("You eat breakfast")
+def drink_coffee():
+    time.sleep(4)
+    print("You drank coffee")
+def study():
+    time.sleep(5)
+    print("You finish studying")
+
+# x = threading.Thread(target=eat_breakfast, args=())
+# x.start()
+# y = threading.Thread(target=drink_coffee, args=())
+# y.start()
+# z = threading.Thread(target=study, args=())
+# z.start()
+# Joins the threads to wait for the rest to follow up
+# x.join()
+# y.join()
+# z.join()
+
+# print(threading.active_count())
+# print(threading.enumerate())
+# print(time.perf_counter())
+
+#--------------------------------------------------------------------------#
+
+# --- DAEMON THREADS --- #
+# daemon thread = a thread that runs in the background, not important for program to run
+#                 the program will not wait for daemon threads to complete before exiting
+#                 non-daemon threads cannot normally be killed, it stays alive until task is complete
+#
+#                 ex. background tasks, garbage collection, waiting for input, long running processes
+# don't forget to import time and threading
+
+def timer():
+    print()
+    count = 0
+    while True:
+        time.sleep(1)
+        count += 1
+        print("logged in for: ", count, "seconds")
+
+x = threading.Thread(target=timer, daemon=True)
+# x.start()
+
+# x.setDaemon(True)
+# print(x.isDaemon())
+
+# answer = input("Do you wish to exit?")
