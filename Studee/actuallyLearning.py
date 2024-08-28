@@ -837,3 +837,141 @@ x = threading.Thread(target=timer, daemon=True)
 # print(x.isDaemon())
 
 # answer = input("Do you wish to exit?")
+
+#--------------------------------------------------------------------------#
+
+# --- MULTIPROCESSING --- #
+# Multiprocessing = running tasks in parallel on different cpu cores, bypasses GIL used for threading
+#                   multiprocessing = better for cpu bound tasks (heavy cpu usage)
+#                   multithreading = better for io bound tasks (waiting around)
+
+from multiprocessing import Process, cpu_count
+import time
+
+def counter(num):
+    count = 0
+    while count < num:
+        count += 1
+
+# def main():
+
+#     print("cpu count:", cpu_count())
+
+#     start_time = time.perf_counter()
+
+#     a = Process(target=counter, args=(500000000,))
+#     b = Process(target=counter, args=(500000000,))
+
+#     a.start()
+#     b.start()
+
+#     print("processing...")
+
+#     a.join()
+#     b.join()
+
+#     end_time = time.perf_counter()
+
+#     print("Done!")
+#     elapsed_time = end_time - start_time
+#     print(f"finished in: {elapsed_time} seconds")
+
+
+# if __name__ == '__main__':
+#     main()
+
+#--------------------------------------------------------------------------#
+
+# --- GUI STUFF --- #
+# Graphical User Interface to display the program in a neat window
+# Widgets = different elements in a UI such as buttons, textbox, images, etc
+# Window = a container to store the widgets and display them
+# use TKINTER 
+
+from tkinter import *
+from PIL import Image, ImageTk
+
+# THE BASIC
+# =========
+# window = Tk() # instantiate an instance of a window
+# window.geometry("420x420") # change the size of the window
+# window.title("First Window!") # change the title of the program on top
+
+# icon = PhotoImage(file='...') # change a image file to PhotoImage
+# window.iconphoto(True,icon) # change the window icon to the icon you want
+# window.config(background='black') # change the background color
+
+# window.mainloop() # place window on the screen, also listens for events
+
+# LABELS
+# =========
+# Label is an area widget that holds text and/or an image inside a window
+# window = Tk()
+# photo = PhotoImage(file='C:\\Users\\Asus VivobookPro\\Documents\\CODING STUFF\\PYTHON STUFF\\PY\\Studee\\soyon.png')
+# label = Label(window, 
+#               text="Hey!", 
+#               font=('Arial', 40, 'bold'), 
+#               fg='black', 
+#               relief=RAISED, 
+#               bd=10, 
+#               padx=20, 
+#               pady=20,
+#               image=photo,
+#               compound='bottom')
+# label.pack()
+# window.mainloop()
+
+# BUTTONS
+# =========
+# Buttons is a clickable element that will do stuff
+# def click():
+#     print("You clicked on chaewon!")
+
+# window = Tk()
+# img = Image.open('C:\\Users\\Asus VivobookPro\\Documents\\CODING STUFF\\PYTHON STUFF\\PY\\PyProjects\\images\\Screenshot (1202).png')
+# resized = img.resize((500,400))
+# chewon = ImageTk.PhotoImage(resized)
+# button = Button(window, 
+#                 text = 'Click Chaewon!',
+#                 font=('Arial', 40, 'bold'),
+#                 command=click,
+#                 fg='white',
+#                 bg='black',
+#                 image=chewon,
+#                 compound='bottom',
+#                 relief=RAISED,
+#                 bd=10,
+#                 padx=20,
+#                 pady=20)
+# button.pack()
+# window.mainloop()
+
+# ENTRYBOX
+# =========
+
+# CHECKBOX
+# =========
+
+# RADIO BUTTONS
+# =========
+
+# SCALE
+# =========
+
+# LISTBOX
+# =========
+
+# MESSAGEBOX
+# =========
+
+# COLOR CHOOSER
+# =========
+
+# TEXT AREA
+# =========
+
+# OPEN A FILE
+# =========
+
+# SAVE A FILE
+# =========
