@@ -948,12 +948,115 @@ from PIL import Image, ImageTk
 
 # ENTRYBOX
 # =========
+# Entry widget = textbox that a acc a single line of input
+# def submit():
+#     usrname = entry.get()
+#     print(f"Hello {usrname}")
+# def erase():
+#     entry.delete(0,END)
+# def backspace():
+#     entry.delete(len(entry.get())-1, END)
+
+# window = Tk()
+# entry = Entry(window,
+#               font=("Arial", 40))
+# entry.pack(side=LEFT)
+# submit_button = Button(window,
+#                        text="Submit",
+#                        command=submit,
+#                        padx=10,
+#                        pady=10,
+#                        font=('Arial', 20))
+# delete_button = Button(window,
+#                        text="Delete",
+#                        command=erase,
+#                        padx=10,
+#                        pady=10,
+#                        font=('Arial', 20))
+# backspace_button = Button(window,
+#                        text="Backspace",
+#                        command=backspace,
+#                        padx=10,
+#                        pady=10,
+#                        font=('Arial', 20))
+# entry.config(show='*') # Password related
+# submit_button.pack(side=RIGHT)
+# delete_button.pack(side=RIGHT)
+# backspace_button.pack(side=RIGHT)
+# window.mainloop()
 
 # CHECKBOX
 # =========
 
+# def display():
+#     if(x.get()==1):
+#         print("You agree!")
+#     else:
+#         print("You don't agree :(")
+
+# window = Tk()
+
+# x = IntVar()
+
+# soyon_photo = PhotoImage(file='C:\\Users\\Asus VivobookPro\\Documents\\CODING STUFF\\PYTHON STUFF\\PY\\Studee\\soyon.png')
+
+# check_button = Checkbutton(window,
+#                            text="I agree to something",
+#                            variable=x,
+#                            onvalue=1,
+#                            offvalue=0,
+#                            command=display,
+#                            font=('Arial',20),
+#                            fg='#00FF00',
+#                            bg='black',
+#                            activeforeground='#00FF00',
+#                            activebackground='black',
+#                            padx=25,
+#                            pady=10,
+#                            image=soyon_photo,
+#                            compound='left')
+# check_button.pack()
+# window.mainloop()
+
 # RADIO BUTTONS
 # =========
+
+sss = ["SeoYeon","NaKyoung","YooYeon"]
+
+def order():
+    if(x.get()==0):
+        print("You chose SeoYeon!")
+    elif(x.get()==1):
+        print("You chose NaKyoung!")
+    elif(x.get()==2):
+        print("You chose YooYeon!")
+    else:
+        print("You picked no one")
+
+window = Tk()
+
+syImage = PhotoImage(file='C:\\Users\\Asus VivobookPro\\Documents\\CODING STUFF\\PYTHON STUFF\\PY\\Studee\\seoyeon.png')
+nyImage = PhotoImage(file='C:\\Users\\Asus VivobookPro\\Documents\\CODING STUFF\\PYTHON STUFF\\PY\\Studee\\nakyoung.png')
+yyImage = PhotoImage(file='C:\\Users\\Asus VivobookPro\\Documents\\CODING STUFF\\PYTHON STUFF\\PY\\Studee\\yooyeon.png')
+sssImages = [syImage,nyImage,yyImage]
+
+x = IntVar()
+
+for index in range(len(sss)):
+    radiobutton = Radiobutton(window,
+                              text=sss[index], #adds text to radio buttons
+                              variable=x, #groups radiobuttons together if they share the same variable
+                              value=index, #assigns each radiobutton a different value
+                              padx = 25, #adds padding on x-axis
+                              font=("Arial",50),
+                              image = sssImages[index], #adds image to radiobutton
+                              compound = 'left', #adds image & text (left-side)
+                              indicatoron=0, #eliminate circle indicators
+                              width = 500, #sets width of radio buttons
+                              command=order #set command of radiobutton to function
+                              )
+    radiobutton.pack(anchor=W)
+window.mainloop()
 
 # SCALE
 # =========
